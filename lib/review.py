@@ -97,7 +97,7 @@ class Review:
         review = cls(year, summary, employee_id)
         review.save()
 
-    return review
+        return review
    
     @classmethod
     def instance_from_db(cls, row):
