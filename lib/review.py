@@ -59,11 +59,11 @@ class Review:
         """ Create a new table to persist the attributes of Review instances """
         sql = """
             CREATE TABLE IF NOT EXISTS reviews (
-            id INTEGER PRIMARY KEY,
-            year INT,
-            summary TEXT,
-            employee_id INTEGER,
-            FOREIGN KEY (employee_id) REFERENCES employee(id))
+                id INTEGER PRIMARY KEY,
+                year INT,
+                summary TEXT,
+                employee_id INTEGER,
+                FOREIGN KEY (employee_id) REFERENCES employee(id))
         """
         CURSOR.execute(sql)
         CONN.commit()
